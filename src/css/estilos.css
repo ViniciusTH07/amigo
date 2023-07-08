@@ -1,0 +1,126 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&display=swap');
+
+body{
+    font-family: 'poppins', 
+    sans-serif;
+    max-width: 1280px;
+    margin: 0 auto; 
+}
+
+.fundo{
+    background-color: #382af7b4;
+    position: fixed;
+    width: 95%;
+    height: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 40px;
+  }
+
+.nome{
+    font-family: Caprasimo;
+    font-size: 225%;
+    color: #F7382A;
+    margin: center center;
+    margin-bottom: 1000%;
+  }
+
+  .a{
+    max-width: 1400px;
+    padding: 3%;
+    margin:auto;
+  }
+  nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  nav .b{
+    font-size: 35px;
+    font-style: italic;
+    font-weight: bold;
+    color: #002333;
+  }
+  nav ul{
+    list-style: none;
+  }
+  nav ul li{
+    display: inline-block;
+  }
+  nav ul li a{
+    padding: 10px 20px;
+    color:#F7382A;
+    font-family: Caprasimo;
+  }
+  nav ul li a:hover{
+  color: #09006b;
+    
+  }
+
+
+
+
+main:after{
+content: '';
+min-height: 100vh;
+width: 100vw;
+position: fixed;
+top: 0;
+left: 0;
+background-color: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.1897217334845127) 50%, rgba(0,0,0,0.8) 100%);
+z-index: -1;
+}
+
+.botoes-carrossel{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 40%;
+}
+
+.botoes-carrossel .botao{
+    background-color: #ffffff;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    border-color: #ffffff;
+    border: solid 2px;
+}
+
+.botoes-carrossel .botao.selecionado{
+    background-color: #ff0000;
+    border: solid 2px;
+}
+
+.carrossel{
+    position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+z-index: -1;
+}
+
+.carrossel .imagem{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    display: none;
+animation: mudarImagem 0.5s;
+}
+
+.carrossel .imagem.ativa{
+    display: block;
+}
+
+@keyframes mudarImagem{
+    from{
+opacity: 0.85;
+    }
+    to{
+opacity: 1;
+    }
+}
